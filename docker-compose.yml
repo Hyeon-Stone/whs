@@ -1,6 +1,6 @@
 version: '3'
 services:
-  react:
+  whs:
     image: whs-web
     container_name: whs-web
     build:
