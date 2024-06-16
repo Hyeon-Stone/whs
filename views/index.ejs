@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='./stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="main-box">
+      <div class="title-box">
+        공급망 보안 관점에서의<br> 머신러닝을 활용한<br> 악성 패키지 및 라이브러리 탐지
+      </div>
+      <div class="start-box">
+        <input class="input-box" placeholder="Package Name"></input>
+        <button class="start-button">실행하기</button>
+      </div>
+      <table class="table">
+        <tr class="row">
+          <td class="content">NAME</td>
+          <td class="content">Score</td>
+          <td class="content">위험도</td>
+        </tr>
+        <tr class="row">
+          <td class="content">forch</td>
+          <td class="content">4.0</td>
+          <td class="button-content"><div class="warn-button">주의!!!</div></td>
+        </tr>
+        <tr class="row">
+          <td class="content">torch-py</td>
+          <td class="content">3.0</td>
+          <td class="button-content"><div class="danger-button">위험!!!</div></td>
+        </tr>
+        <tr class="row">
+          <td class="content">torchaudio</td>
+          <td class="content">2.5</td>
+          <td class="button-content"><div class="normal-button">안전!!!</div></td>
+        </tr>
+        <tr class="row">
+          <td class="content">torchvision</td>
+          <td class="content">2.1</td>
+          <td class="button-content"><div class="normal-button">안전!!!</div></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

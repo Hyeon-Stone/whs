@@ -1,0 +1,12 @@
+version: '3'
+services:
+  react:
+    image: whs-web
+    container_name: whs-web
+    build:
+      context: .
+      dockerfile: DockerFile
+    # network_mode: host
+    ports:
+      - 3000:3000
+    stdin_open: true
