@@ -9,8 +9,11 @@ const copyBlockCode = async (target = null) => {
     if (!target) return;
     try {
         const code = decodeURI(target.dataset.code);
-
-        await navigator.clipboard.writeText(code);
+        if (window.isSecureContext && navigator.clipboard) {
+            await navigator.clipboard.writeText(code);
+        } else {
+            unsecuredCopyToClipboard(code);
+        }
         target.textContent = COPY_BUTTON_TEXT_AFTER;
         setTimeout(() => {
             target.textContent = COPY_BUTTON_TEXT_BEFORE;
@@ -20,6 +23,17 @@ const copyBlockCode = async (target = null) => {
         console.error(error);
     }
 }
+
+function unsecuredCopyToClipboard(text) {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+}
+
 $(document).ready(function(){
     cnt = 0;
     for (const codeBlock of codeBlocks) {
