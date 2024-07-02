@@ -49,14 +49,8 @@ $(document).ready(function(){
         onclick="copyBlockCode(this)">${COPY_BUTTON_TEXT_BEFORE}</button>`;
 
         const codeBody = `<div class="code-body code-body${cnt}">${processedCodes}</div>`;
-        const codeHeader = `
-    <div class="code-header code-header${cnt}">
-      <span class="red btn"></span>
-      <span class="yellow btn"></span>
-      <span class="green btn"></span>
-      ${copyButton}
-    </div>`;
-        codeBlock.innerHTML = codeHeader + codeBody;
+
+        codeBlock.innerHTML = codeBody + copyButton;
         cnt +=1
     }
 

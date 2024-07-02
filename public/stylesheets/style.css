@@ -1,56 +1,53 @@
 body {
-  padding: 50px;
+  /* padding: 50px; */
+  margin: 0 !important;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #F8FCFA;
 }
 
 .main-box {
+  min-height: calc(100vh - 90px - 122px); /* footer 높이를 빼준다. */
+}
+.top-header {
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  background-color: #7dc1a5;
   display: flex;
-  max-width: 958px;
-  flex-direction: column;
-  padding: 56px 67px;
+  width: 100%;
+  padding-top: 49px;
+  padding-bottom: 49px;
 }
 @media (max-width: 991px) {
-  .main-box {
+  .top-header {
+    max-width: 100%;
     padding: 0 20px;
   }
 }
-.title-box {
-  color: #000;
-  text-align: center;
-  align-self: stretch;
-  font: 800 48px/60px Inter, sans-serif;
+.logo {
+  aspect-ratio: 6.25;
+  object-fit: auto;
+  object-position: center;
+  width: 758px;
+  max-width: 100%;
 }
-@media (max-width: 991px) {
-  .title-box {
-    max-width: 100%;
-    font-size: 40px;
-    line-height: 56px;
-  }
-}
+
 .start-box {
-  justify-content: space-around;
+  margin-top: 50px !important;
+  align-items: center;
+  margin: 0 auto;
   display: flex;
-  margin-top: 59px;
   width: 471px;
   max-width: 100%;
   gap: 20px;
 }
-@media (max-width: 991px) {
-  .start-box {
-    flex-wrap: wrap;
-    margin-top: 40px;
-  }
-}
+
 .input-box {
   border-radius: 4px;
   background-color: #edf2f7;
   color: var(--gray-400, #000);
-  width: 50%;
+  width: 70%;
   border-color: transparent;
-  padding: 17px 24px;
+  padding: 17px ;
   font: 400 14px Inter, sans-serif;
 }
 @media (max-width: 991px) {
@@ -61,7 +58,7 @@ body {
 .start-button {
   justify-content: center;
   border-radius: 6px;
-  background-color: var(--purple-500, #805ad5);
+  background-color: var(--purple-500, #7dc1a5);
   color: #fff;
   border-color: transparent;
   white-space: nowrap;
@@ -77,35 +74,35 @@ body {
     padding: 10px 20px;
   }
 }
-
 .table {
-  border-radius: 12px;
-  border-color: rgba(226, 232, 240, 1);
-  border-style: solid;
-  border-width: 1px;
+  margin: 0 auto;
+  overflow-x: auto;
   background-color: var(--white, #fff);
   display: flex;
-  margin-top: 59px;
-  width: 100%;
+  margin-top: 30px;
+  width: 80%;
   flex-direction: column;
   font-size: 14px;
   color: var(--gray-700, #2d3748);
   white-space: nowrap;
   line-height: 143%;
   padding: 12px;
+  justify-content: center;
+  align-items: center;
 }
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .table {
     max-width: 100%;
     margin-top: 40px;
     white-space: initial;
   }
-}
+} */
 .row {
   justify-content: center;
   align-items: center;
   display: flex;
-  gap: 0px;
+  flex-wrap: nowrap;
+  gap: 150px;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.6px;
@@ -114,11 +111,27 @@ body {
 }
 @media (max-width: 991px) {
   .row {
-    max-width: 100%;
-    flex-wrap: wrap;
-    white-space: initial;
+    gap: 50px;
   }
 }
+.content-header {
+  font-family: Inter, sans-serif;
+  justify-content: center;
+  align-items: start;
+  background-color: var(--white, #fff);
+  align-self: stretch;
+  flex: 1;
+  margin: auto 0;
+  padding: 7px 24px;
+  font-size: large;
+  font-weight: bold;
+}
+/* @media (max-width: 991px) {
+  .content-header {
+    white-space: initial;
+    padding: 0 20px;
+  }
+} */
 .content {
   font-family: Inter, sans-serif;
   justify-content: center;

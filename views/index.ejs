@@ -5,47 +5,157 @@
     <link rel='stylesheet' href='./stylesheets/style.css' />
     <link rel='stylesheet' href='./stylesheets/codeBlock.css' />
   </head>
+
   <body>
+    <div class="top-header" style="background-color: #7dc1a5;">
+      <img loading="lazy" src="./images/123.svg" class="logo"/>
+    </div>
     <div class="main-box">
-      <div class="title-box">
-        공급망 보안 관점에서의<br> 머신러닝을 활용한<br> 악성 패키지 및 라이브러리 탐지
-      </div>
       <div class="start-box">
         <input class="input-box" placeholder="Package Name"></input>
         <button class="start-button">실행하기</button>
       </div>
       <table class="table">
         <tr class="row">
-          <td class="content">NAME</td>
-          <td class="content">Score</td>
-          <td class="content">위험도</td>
+          <td class="content-header">Name</td>
+          <td class="content-header">Score</td>
+          <td class="content-header">Danger</td>
+          <td class="content-header">Result</td>
         </tr>
         <tr class="row">
           <td class="content">forch</td>
           <td class="content">4.0</td>
+          <td class="button-content"><div class="warn-button">주의!!!</div></td>
           <td class="button-content"><div class="warn-button">주의!!!</div></td>
         </tr>
         <tr class="row">
           <td class="content">torch-py</td>
           <td class="content">3.0</td>
           <td class="button-content"><div class="danger-button">위험!!!</div></td>
+          <td class="button-content"><div class="warn-button">주의!!!</div></td>
         </tr>
         <tr class="row">
           <td class="content">torchaudio</td>
           <td class="content">2.5</td>
           <td class="button-content"><div class="normal-button">안전!!!</div></td>
+          <td class="button-content"><div class="warn-button">주의!!!</div></td>
         </tr>
         <tr class="row">
           <td class="content">torchvision</td>
           <td class="content">2.1</td>
           <td class="button-content"><div class="normal-button">안전!!!</div></td>
+          <td class="button-content"><div class="warn-button">주의!!!</div></td>
+        </tr>
+        <tr class="row">
+          <td class="content">torchvision</td>
+          <td class="content">2.1</td>
+          <td class="button-content"><div class="normal-button">안전!!!</div></td>
+          <td class="button-content"><div class="warn-button">주의!!!</div></td>
+        </tr>
+        <tr class="row">
+          <td class="content">torchvision</td>
+          <td class="content">2.1</td>
+          <td class="button-content"><div class="normal-button">안전!!!</div></td>
+          <td class="button-content"><div class="warn-button">주의!!!</div></td>
+        </tr>
+        <tr class="row">
+          <td class="content">torchvision</td>
+          <td class="content">2.1</td>
+          <td class="button-content"><div class="normal-button">안전!!!</div></td>
+          <td class="button-content"><div class="warn-button">주의!!!</div></td>
         </tr>
       </table>
-
-      <pre>
-        <code class="hljs">   pip install torch</code>
-    </pre>
+  
+      <div class="code-block">
+        <div class="looking-for">Are you looking for</div>
+        <pre>
+          <code class="hljs">pip install torch</code>
+        </pre>
+      </div>
     </div>
     <script src="./javascripts/codeblock.js"></script>
   </body>
+  <footer>
+    <div class="div">
+      <div class="div-2">
+        <div class="div-3">
+          <div class="div-4">
+            MENTOR / PL
+          </div>
+          <div class="div-5">김진영   현석훈</div>
+        </div>
+        <div class="div-6">
+          <div class="div-7">
+            MEMBER
+          </div>
+          <div class="div-8">권유진   권준혁  김가은  김택우  장은서  장현진   전현수</div>
+        </div>
+      </div>
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/a9e7e2c1d130dd3346cdad3b1fad4ef0ac2420f01c2cfa6bd181710694e57dac?"
+        class="img"
+      />
+    </div>
+    <style>
+      footer {
+        height: 90px;
+        width: 100%;
+      }
+      .div {
+        background-color: #fff;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        font-weight: 700;
+        margin-top: 30px;
+        padding-top: 30px;
+      }
+      .div-2 {
+        display: flex;
+        width: 760px;
+        max-width: 100%;
+        align-items: start;
+        gap:10px;
+        justify-content: space-between;
+      }
+      .div-3 {
+        display: flex;
+        flex-direction: column;
+      }
+      .div-4 {
+        padding-left: 30px;
+        color: #7dc1a5;
+        font: 20px Inter, sans-serif;
+      }
+      .div-5 {
+        padding-left: 30px;
+        color: #808080;
+        margin-top: 19px;
+        font: 15px Inter, sans-serif;
+      }
+      .div-6 {
+        display: flex;
+        flex-direction: column;
+      }
+      .div-7 {
+        color: #7dc1a5;
+        font: 20px Inter, sans-serif;
+      }
+      .div-8 {
+        color: #808080;
+        margin-top: 19px;
+        font: 15px Inter, sans-serif;
+      }
+      .img {
+        aspect-ratio: 12.5;
+        object-fit: auto;
+        object-position: center;
+        width: 236px;
+        align-self: end;
+        margin-top: 11px;
+        max-width: 100%;
+      }
+    </style>
+  </footer>
 </html>
