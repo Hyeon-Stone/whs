@@ -16,8 +16,8 @@ pre {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    max-width: 879px;
-    min-width: 400px;
+    max-width: 50%;
+    min-width: 423px;
     gap: 20px;
     font-size: 20px;
     font-weight: 400;

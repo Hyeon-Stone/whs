@@ -15,65 +15,50 @@
         <input class="input-box" placeholder="Package Name"></input>
         <button class="start-button">실행하기</button>
       </div>
-      <table class="table">
-        <tr class="row">
-          <td class="content-header">Name</td>
-          <td class="content-header">Score</td>
-          <td class="content-header">Danger</td>
-          <td class="content-header">Result</td>
-        </tr>
-        <tr class="row">
-          <td class="content">forch</td>
-          <td class="content">4.0</td>
-          <td class="button-content"><div class="warn-button">주의!!!</div></td>
-          <td class="button-content"><div class="warn-button">주의!!!</div></td>
-        </tr>
-        <tr class="row">
-          <td class="content">torch-py</td>
-          <td class="content">3.0</td>
-          <td class="button-content"><div class="danger-button">위험!!!</div></td>
-          <td class="button-content"><div class="warn-button">주의!!!</div></td>
-        </tr>
-        <tr class="row">
-          <td class="content">torchaudio</td>
-          <td class="content">2.5</td>
-          <td class="button-content"><div class="normal-button">안전!!!</div></td>
-          <td class="button-content"><div class="warn-button">주의!!!</div></td>
-        </tr>
-        <tr class="row">
-          <td class="content">torchvision</td>
-          <td class="content">2.1</td>
-          <td class="button-content"><div class="normal-button">안전!!!</div></td>
-          <td class="button-content"><div class="warn-button">주의!!!</div></td>
-        </tr>
-        <tr class="row">
-          <td class="content">torchvision</td>
-          <td class="content">2.1</td>
-          <td class="button-content"><div class="normal-button">안전!!!</div></td>
-          <td class="button-content"><div class="warn-button">주의!!!</div></td>
-        </tr>
-        <tr class="row">
-          <td class="content">torchvision</td>
-          <td class="content">2.1</td>
-          <td class="button-content"><div class="normal-button">안전!!!</div></td>
-          <td class="button-content"><div class="warn-button">주의!!!</div></td>
-        </tr>
-        <tr class="row">
-          <td class="content">torchvision</td>
-          <td class="content">2.1</td>
-          <td class="button-content"><div class="normal-button">안전!!!</div></td>
-          <td class="button-content"><div class="warn-button">주의!!!</div></td>
-        </tr>
+      <div class="table-box">
+        <table class="table">
+          <tr class="row">
+            <td class="content-header">Name</td>
+            <td class="content-header">Score</td>
+            <td class="content-header">Danger</td>
+            <td class="content-header">Result<button class="show-button">full</button></td>
+          </tr>
+          <% for(var i = 0; i < data.typoResult.length; i++){ %> 
+            <tr class="row">
+              <td class="content"><%= data.typoResult[i].name %></td>
+              <td class="content"><%= data.typoResult[i].score %></td>
+              <td class="button-content"><div class="warn-button"><%= data.typoResult[i].danger %></div></td>
+              <td class="result-tag"><%= data.typoResult[i].result %></td>
+            </tr>
+           <% } %>
       </table>
+      </div>
   
       <div class="code-block">
         <div class="looking-for">Are you looking for</div>
         <pre>
-          <code class="hljs">pip install torch</code>
+          <code class="hljs"><%=data.recommand%></code>
         </pre>
       </div>
     </div>
     <script src="./javascripts/codeblock.js"></script>
+    <script>
+      const resultList = document.querySelectorAll(".result-tag");
+      const showButton = document.querySelector(".show-button");
+      const CLICKED_CLASS = "result_eclipse";
+      function handleClick() {
+        for (result of resultList) {
+          result.classList.toggle(CLICKED_CLASS);
+        }
+        showButton.addEventListener("click", handleClick);
+      }
+
+      function init() {
+          handleClick();
+      }
+
+      init();
+    </script>
   </body>
   <footer>
     <div class="div">

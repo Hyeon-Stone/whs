@@ -3,7 +3,29 @@ import {Router} from "express";
 var router = Router();
 
 router.get("/", function(req, res, next){
-  res.render('index');
+  res.render('index', {data : {
+    typoResult : [
+        {
+            name : "torch",
+            score : 4.5,
+            danger : "alert",
+            result : "설명설명설명설명"
+        },
+        {
+            name : "torch",
+            score : 4.5,
+            danger : "alert",
+            result : "설명설명설명설명"
+        },
+        {
+            name : "torch",
+            score : 4.5,
+            danger : "alert",
+            result : "설명설명설명설명"
+        },
+    ],
+    recommand : "pip install torch222"
+}});
 })
 
 

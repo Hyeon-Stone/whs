@@ -75,20 +75,37 @@ body {
   }
 }
 .table {
-  margin: 0 auto;
-  overflow-x: auto;
   background-color: var(--white, #fff);
-  display: flex;
-  margin-top: 30px;
-  width: 80%;
-  flex-direction: column;
   font-size: 14px;
   color: var(--gray-700, #2d3748);
   white-space: nowrap;
-  line-height: 143%;
-  padding: 12px;
+  /* line-height: 143%; */
+  width: 100%;
+  padding: 50px;
+  margin: 0 auto;  
+  min-height: calc(100vh - 600px); /* footer 높이를 빼준다. */
+}
+.table-box {
+  margin: 0 auto;
+  max-height: calc(100vh - 300px); /* footer 높이를 빼준다. */
+  min-height: calc(100vh - 600px); /* footer 높이를 빼준다. */
+  margin-top: 20px !important;
+  width: 70%;
+  overflow-x: auto;
   justify-content: center;
   align-items: center;
+}
+.show-button {
+  margin-left: 5px;
+  justify-content: center;
+  border-radius: 6px;
+  background-color: var(--purple-500, #7dc1a5);
+  color: #fff;
+  border-color: transparent;
+  white-space: nowrap;
+}
+.show-button:active {
+  box-shadow: 2px 2px 0 rgb(0,0,0,0.3);
 }
 /* @media (max-width: 991px) {
   .table {
@@ -98,7 +115,7 @@ body {
   }
 } */
 .row {
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   display: flex;
   flex-wrap: nowrap;
@@ -125,6 +142,9 @@ body {
   padding: 7px 24px;
   font-size: large;
   font-weight: bold;
+  text-align: center;
+  min-width: 67px;
+  max-width: 67px;
 }
 /* @media (max-width: 991px) {
   .content-header {
@@ -141,27 +161,29 @@ body {
   flex: 1;
   margin: auto 0;
   padding: 7px 24px;
+  text-align: center;
+  min-width: 67px;
+  max-width: 67px;
 }
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .content {
     white-space: initial;
     padding: 0 20px;
   }
-}
+} */
 .button-content {
-  align-items: start;
-  background-color: var(--white, #fff);
-  align-self: stretch;
   display: flex;
-  flex-direction: column;
+  min-width: 67px;
+  max-width: 67px;
   font-size: 12px;
   color: var(--white, #fff);
   font-weight: 700;
-  text-transform: uppercase;
-  line-height: 133%;
   justify-content: center;
-  flex: 1;
-  padding: 6px 20px;
+  margin: 0 auto;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 @media (max-width: 991px) {
   .button-content {
@@ -204,3 +226,19 @@ body {
     white-space: initial;
   }
 }
+
+.result-tag {
+  font-family: Inter, sans-serif;
+  justify-content: center;
+  padding: 2px 24px;
+  overflow:hidden;
+  white-space:nowrap;
+  min-width: 67px;
+  max-width: 67px;
+  color: #000;
+}
+.result_eclipse {
+  text-overflow:ellipsis;
+  max-width:none;
+}
+
