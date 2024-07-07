@@ -12,8 +12,10 @@
     </div>
     <div class="main-box">
       <div class="start-box">
-        <input class="input-box" placeholder="Package Name"></input>
-        <button class="start-button">실행하기</button>
+        <form action="/check" method="get" name="check" class="input-form">
+          <input class="input-box" name="packageName" placeholder="Package Name"></input>
+          <button class="start-button" type = "submit">실행하기</button>
+        </form>
       </div>
       <div class="table-box">
         <table class="table">
