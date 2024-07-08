@@ -191,19 +191,8 @@ body {
     white-space: initial;
   }
 }
-.warn-button {
-  font-family: Inter, sans-serif;
-  border-radius: 2px;
-  background-color: var(--orange-500, #dd6b20);
-  justify-content: center;
-  padding: 2px 4px;
-}
-@media (max-width: 991px) {
-  .warn-button {
-    white-space: initial;
-  }
-}
-.danger-button {
+
+.alert-button {
   font-family: Inter, sans-serif;
   border-radius: 2px;
   background-color: #e53e3e;
@@ -211,11 +200,38 @@ body {
   padding: 2px 4px;
 }
 @media (max-width: 991px) {
-  .danger-button {
+  .alert-button {
     white-space: initial;
   }
 }
-.normal-button {
+
+.crit-button {
+  font-family: Inter, sans-serif;
+  border-radius: 2px;
+  background-color: var(--orange-500, #dd6b20);
+  justify-content: center;
+  padding: 2px 4px;
+}
+@media (max-width: 991px) {
+  .crit-button {
+    white-space: initial;
+  }
+}
+
+.warning-button {
+  font-family: Inter, sans-serif;
+  border-radius: 2px;
+  background-color: yellow;
+  justify-content: center;
+  padding: 2px 4px;
+}
+@media (max-width: 991px) {
+  .warning-button {
+    white-space: initial;
+  }
+}
+
+.notice-button {
   font-family: Inter, sans-serif;
   border-radius: 2px;
   background-color: var(--green-500, #38a169);
@@ -223,7 +239,20 @@ body {
   padding: 2px 4px;
 }
 @media (max-width: 991px) {
-  .normal-button {
+  .notice-button {
+    white-space: initial;
+  }
+}
+
+.info-button {
+  font-family: Inter, sans-serif;
+  border-radius: 2px;
+  background-color: var(--green-500, blue);
+  justify-content: center;
+  padding: 2px 4px;
+}
+@media (max-width: 991px) {
+  .info-button {
     white-space: initial;
   }
 }

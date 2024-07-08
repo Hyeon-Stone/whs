@@ -29,7 +29,25 @@
             <tr class="row">
               <td class="content"><%= data.typoResult[i].name %></td>
               <td class="content"><%= data.typoResult[i].score %></td>
-              <td class="button-content"><div class="warn-button"><%= data.typoResult[i].danger %></div></td>
+              <td class="button-content">
+                <% if(data.typoResult[i].danger === "NOTICE"){ %>
+                  <div class="notice-button"><%= data.typoResult[i].danger %></div>
+                <% } else { %>
+                  <% if(data.typoResult[i].danger === "WARNING"){ %>
+                    <div class="warning-button"><%= data.typoResult[i].danger %></div>
+                  <% } else { %>
+                    <% if(data.typoResult[i].danger === "CRIT"){ %>
+                      <div class="crit-button"><%= data.typoResult[i].danger %></div>
+                    <% } else { %>
+                      <% if(data.typoResult[i].danger === "ALERT"){ %>
+                        <div class="alert-button"><%= data.typoResult[i].danger %></div>
+                      <% } else { %>
+                        <div class="info-button"><%= data.typoResult[i].danger %></div>
+                      <% } %>
+                    <% } %>
+                  <% } %>
+                <% } %>
+              </td>
               <td class="result-tag"><%= data.typoResult[i].result %></td>
             </tr>
            <% } %>
